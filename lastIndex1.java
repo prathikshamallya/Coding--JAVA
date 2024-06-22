@@ -1,0 +1,42 @@
+
+import java.io.*;
+
+class lastIndex1 {
+	public static void main(String[] args) throws IOException
+	{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(br.readLine().trim());
+        while(t-->0)
+        {
+            String s = br.readLine();
+            
+            Solution obj = new Solution();
+            System.out.println(obj.lastIndex( s));
+            
+        }
+	}
+}
+
+// } Driver Code Ends
+
+
+//User function Template for Java
+
+
+class Solution {
+    public int lastIndex( String s) {
+        int index=-1;
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                index=i;;
+            }
+        }
+        if(index==-1){
+            return-1;
+        }
+        else{
+            return index;
+        }
+        
+    }
+}
